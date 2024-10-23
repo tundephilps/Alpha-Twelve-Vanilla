@@ -1,0 +1,25 @@
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+    --black : #000000;
+    --gray : #808080;
+    --divider : #e5e7eb;
+    --primary : #8576ff;
+    --primary-30 : #8576ff30;
+    --primary-50 : #8576ff50;
+    --smallerText : 12px;
+    --smallText : 14px;
+    --mediumText : 16px;
+    --largeText : 20px;
+    --mobileScreen : 768px;
+}
+
+:root.light {
+    --white: #ffffff;
+    --black: #000000;
+}
+
+:root.dark {
+    --white: #121212;
+    --black: #ffffff;
+}

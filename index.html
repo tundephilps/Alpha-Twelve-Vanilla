@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="main.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Alpha Twelve</title>
+  </head>
+  <body>
+    <div class="container w-full">
+      <div class="navbar">
+        <div class="navbarContent">
+          <img class="logo" src="images/logo.png" alt="logo" />
+          <ion-icon name="menu-outline" class="icon" id="menubar"></ion-icon>
+        </div>
+      </div>
+      <div class="wrapper w-full">
+        <div class="sidebar" id="sidebar">
+          <div class="sidebarContent">
+            <img class="logo" src="images/logo.png" alt="logo" />
+            <div class="links">
+              <a class="link active">
+                <ion-icon name="home-outline" class="icon"></ion-icon>
+                <p class="linkText">Home</p>
+              </a>
+              <a class="link">
+                <ion-icon name="calendar-outline" class="icon"></ion-icon>
+                <p class="linkText">Events</p>
+              </a>
+              <a class="link">
+                <ion-icon name="person-outline" class="icon"></ion-icon>
+                <p class="linkText">Speakers</p>
+              </a>
+              <a class="link">
+                <ion-icon name="clipboard-outline" class="icon"></ion-icon>
+                <p class="linkText">Reports</p>
+              </a>
+              <a class="link">
+                <ion-icon name="notifications-outline" class="icon"></ion-icon>
+                <p class="linkText">Notifications</p>
+              </a>
+              <a class="link">
+                <ion-icon name="chatbubbles-outline" class="icon"></ion-icon>
+                <p class="linkText">Messages</p>
+              </a>
+              <a class="link">
+                <ion-icon name="settings-outline" class="icon"></ion-icon>
+                <p class="linkText">Settings</p>
+              </a>
+              <a class="link">
+                <ion-icon
+                  name="chevron-collapse-outline"
+                  class="icon"
+                ></ion-icon>
+                <p class="linkText">Collapse</p>
+              </a>
+            </div>
+            <div class="link hovernot">
+              <div class="darkmodeWrapper">
+                <label class="toggleBox">
+                  <input
+                    type="checkbox"
+                    id="toggleDarkMode"
+                    class="isActiveReferralContest"
+                  />
+                  <span class="toggleSlider round"></span>
+                </label>
+                <label for="toggle" class="toggleText">Dark Mode</label>
+              </div>
+            </div>
+            <div class="link hovernot">
+              <div class="avatarWrapper">
+                <img src="avatar.jpg" alt="avatar" />
+                <div class="avatarContent">
+                  <p class="name">Rudra Devi</p>
+                  <p class="email">rudra.devi@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Body -->
+        <div class="content w-full">
+          <p class="sectionText">Welcome! here's your summary</p>
+          <div class="cards">
+            <div class="card">
+              <p class="label">
+                Total Events
+                <ion-icon class="icon" name="alert-circle-outline"></ion-icon>
+              </p>
+              <p class="text">
+                100,000
+                <span class="trendingUp"
+                  ><ion-icon name="trending-up-outline"></ion-icon>+5.0%</span
+                >
+              </p>
+            </div>
+            <div class="card">
+              <p class="label">
+                Active Speakers
+                <ion-icon class="icon" name="alert-circle-outline"></ion-icon>
+              </p>
+              <p class="text">
+                25
+                <span class="trendingDown"
+                  ><ion-icon name="trending-down-outline"></ion-icon>+5.0%</span
+                >
+              </p>
+            </div>
+            <div class="card">
+              <p class="label">
+                Total Registration
+                <ion-icon class="icon" name="alert-circle-outline"></ion-icon>
+              </p>
+              <p class="text">
+                300
+                <span class="trendingUp"
+                  ><ion-icon name="trending-up-outline"></ion-icon>+5.0%</span
+                >
+              </p>
+            </div>
+            <div class="card">
+              <p class="label">
+                Total Revenue
+                <ion-icon class="icon" name="alert-circle-outline"></ion-icon>
+              </p>
+              <p class="text">
+                $500,000
+                <span class="trendingUp"
+                  ><ion-icon name="trending-up-outline"></ion-icon>+5.0%</span
+                >
+              </p>
+            </div>
+          </div>
+          <p class="sectionText">Event Registration per month</p>
+          <div class="grid lg:grid-cols-2 grid-cols-1 gap-8">
+            <div class="chart">
+              <canvas id="myChart"></canvas>
+            </div>
+            <div class="carousel">
+              <div class="eventsWrapper">
+                <div class="event">
+                  <img src="images/slider1.png" alt="slider1 image" />
+                  <div class="textWrapper">
+                    <p class="label">Upcoming Events</p>
+                    <p class="text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Id excepturi, recusandae officiis repellat pariatur
+                      facere, unde amet optio fug
+                    </p>
+                  </div>
+                </div>
+                <div class="event">
+                  <img src="images/slider2.png" alt="slider2 image" />
+                  <div class="textWrapper">
+                    <p class="label">Latest News & Updates</p>
+                    <p class="text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Id excepturi, recusandae officiis repellat pariatur
+                      facere, unde amet optio fug
+                    </p>
+                  </div>
+                </div>
+                <div class="event">
+                  <img src="images/slider3.png" alt="slider3 image" />
+                  <div class="textWrapper">
+                    <p class="label">Featured Updates</p>
+                    <p class="text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Id excepturi, recusandae officiis repellat pariatur
+                      facere, unde amet optio fug
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Navigation Arrows -->
+              <button class="prev"><</button>
+              <button class="next">></button>
+              <div class="dotsWrapper">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+          <div class="table">
+            <p class="sectionText">Event History</p>
+            <div class="optionsWrapper">
+              <input type="text" placeholder="Search" id="searchInput" />
+
+              <input type="date" id="searchDate" placeholder="date" />
+              <select id="searchStatus">
+                <option value="" selected>Status All</option>
+                <option value="Completed">Completed</option>
+                <option value="In Progress">In Progress</option>
+              </select>
+              <select class="select-eventName">
+                <option value="" selected disabled>Name</option>
+              </select>
+              <p class="resultsText">Displaying 10 results</p>
+              <div class="sortWrapper">
+                <p>Sort</p>
+                <select class="select-sort" id="sortSelect">
+                  <option value="date" selected>Most Recent</option>
+                  <option value="eventName">Event Name</option>
+                  <option value="speaker">Speaker</option>
+                </select>
+              </div>
+            </div>
+            <div class="w-full">
+              <table id="eventTable" class="w-full">
+                <thead>
+                  <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Speaker</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+            <div class="pagination">
+              <div id="pagination"></div>
+              <div class="numberOfRows">
+                <p>Show</p>
+                <select id="numberOfRows">
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                  <option value="30">30</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottomNavbar">
+          <div class="links">
+            <a class="link active">
+              <ion-icon name="home-outline" class="icon"></ion-icon>
+              <p class="linkText">Home</p>
+            </a>
+            <a class="link">
+              <ion-icon name="calendar-outline" class="icon"></ion-icon>
+              <p class="linkText">Events</p>
+            </a>
+            <a class="link">
+              <ion-icon name="person-outline" class="icon"></ion-icon>
+              <p class="linkText">Speakers</p>
+            </a>
+            <a class="link">
+              <ion-icon name="clipboard-outline" class="icon"></ion-icon>
+              <p class="linkText">Reports</p>
+            </a>
+            <a class="link">
+              <ion-icon name="person-outline" class="icon"></ion-icon>
+              <p class="linkText">Profile</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
